@@ -1,7 +1,8 @@
 import React from "react";
-import { getInitialData, showFormattedDate } from "../utils/data";
+import { getInitialData, showFormattedDate } from "../utils/index";
+import Navbar from './Navbar';
 
-class ContactApp extends React.Component {
+class NotesApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -36,7 +37,8 @@ class ContactApp extends React.Component {
 
     render() {
         return (
-            <div className="contact-app">
+            <div className="notes-app">
+                <Navbar />
                 <h1>Aplikasi Kontak</h1>
                 <h2>Tambah Kontak</h2>
                 {/* <ContactInput addContact={this.onAddContactHandler} /> */}
@@ -47,4 +49,4 @@ class ContactApp extends React.Component {
     }
 }
 
-export default ContactApp;
+export default NotesApp;
