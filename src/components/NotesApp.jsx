@@ -1,6 +1,7 @@
 import React from "react";
 import { getInitialData, showFormattedDate } from "../utils/index";
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
+import Sidebar from './Sidebar';
 
 class NotesApp extends React.Component {
     constructor(props) {
@@ -37,14 +38,17 @@ class NotesApp extends React.Component {
 
     render() {
         return (
-            <div className="notes-app">
+            <>
                 <Navbar />
-                <h1>Aplikasi Kontak</h1>
-                <h2>Tambah Kontak</h2>
-                {/* <ContactInput addContact={this.onAddContactHandler} /> */}
-                <h2>Daftar Kontak</h2>
-                {/* <ContactList contacts={this.state.contacts} onDelete={this.onDeleteHandler} /> */}
-            </div>
+                <div className="d-flex" style={{ backgroundImage: "linear-gradient(#074173, #0C71C7)" }}>
+                    <Sidebar />
+                    <h1>Aplikasi Kontak</h1>
+                    <h2>Tambah Kontak</h2>
+                    {/* <ContactInput addContact={this.onAddContactHandler} /> */}
+                    <h2>Daftar Kontak</h2>
+                    {/* <ContactList contacts={this.state.contacts} onDelete={this.onDeleteHandler} /> */}
+                </div>
+            </>
         );
     }
 }
